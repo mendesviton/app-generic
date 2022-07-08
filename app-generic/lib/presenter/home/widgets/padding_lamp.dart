@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
 
 class PaddingLamp extends StatelessWidget {
+  final Color ColorBackGroud;
+  final bool isOpened;
+  final IconData icon;
+  final String title;
+
   const PaddingLamp({
     Key? key,
+    required this.ColorBackGroud,
+    required this.isOpened,
+    required this.icon,
+    required this.title,
   }) : super(key: key);
 
   @override
@@ -38,13 +47,13 @@ class PaddingLamp extends StatelessWidget {
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
+                  children: [
                     Icon(
-                      Icons.light_outlined,
+                      icon,
                       color: Colors.black,
                       size: 35,
                     ),
-                    Icon(
+                    const Icon(
                       Icons.circle,
                       color: Colors.red,
                       size: 6,
@@ -54,8 +63,8 @@ class PaddingLamp extends StatelessWidget {
                 const SizedBox(
                   height: 15,
                 ),
-                const Text(
-                  'Lamp',
+                Text(
+                  title,
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 23,
@@ -64,7 +73,7 @@ class PaddingLamp extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                const Text('OPENED',
+                Text(isOpened ? 'qweqwe' : 'qweqweq',
                     style: TextStyle(color: Colors.black, fontSize: 13))
               ]),
         ),

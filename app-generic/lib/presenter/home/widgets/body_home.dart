@@ -31,11 +31,26 @@ class BodyHome extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               // mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: const [
-                PaddingLamp(),
-                PaddingLamp(),
-                PaddingLamp(),
-                PaddingLamp(),
-                PaddingLamp(),
+                PaddingLamp(
+                    ColorBackGroud: Colors.amber,
+                    isOpened: true,
+                    icon: Icons.account_circle_sharp,
+                    title: 'Alarme'),
+                PaddingLamp(
+                    ColorBackGroud: Colors.brown,
+                    isOpened: true,
+                    icon: Icons.access_alarms_outlined,
+                    title: 'Televisão'),
+                PaddingLamp(
+                    ColorBackGroud: Colors.amber,
+                    isOpened: true,
+                    icon: Icons.access_time_sharp,
+                    title: 'Quadro'),
+                PaddingLamp(
+                    ColorBackGroud: Colors.blue,
+                    isOpened: true,
+                    icon: Icons.accessible_forward_rounded,
+                    title: 'Lampada')
               ],
             ),
           ),
